@@ -1,0 +1,47 @@
+INSTRUCTIONS
+------------
+Fill in the information below and submit this file together with your
+name server configuration files.
+
+Do not remove any parts of the existing text. Leave it as it is, and
+just fill in information about your group, and answers to the questions. 
+
+GROUP INFORMATION
+-----------------
+
+Group number: 34
+Student name 1: Pengzhan Jiang
+Student name 2: Liyuan Chen
+
+SOLUTIONS TO PART 2 "Server configuration"
+------------------------------------
+
+* Section 8. Create your own zone
+
+Question 8.1:Master.Primary (Master) zones, contain a read/write copy of the zone data.Master zones is the holder of the original zone file (all the DNS records for the zone). We can manage a host through this zone.
+
+Question 8.2: dig ns.group34.ik2218.ssvl.kth.se @8.8.8.8 get the zone in global DNS trees.
+              dig -4 ns.group34.ik2218.ssvl.kth.se @8.8.8.8 get the IPv4 address.
+
+Question 8.3:dig ns.group34.ik2218.ssvl.kth.se @8.8.8.8
+
+* Section 9. Subzones and delgations
+
+Question 9.1:dig ns.sub.group34.ik2218.ssvl.kth.se@a.ns.se
+
+Question 9.2:Glue records are DNS records created at the domain’s registrar. The record provides a complete answer when the TLD nameserver returns a reference for an authoritative nameserver for a domain.192.16.125.106
+
+Question 9.3:us.america.group34 : 1.2.3.4    brazil.america.group34 : 9.10.11.12
+
+Question 9.4: Maple syrup!
+
+Question 9.5: Using dig +trace can Understand DNS Resolution from Start to Finish. Need to iterate through the queries from the root. Each iteration to query NS is done locally, not by the recursive server.We can know that delegation is carried out by means of iterative queries reached in each iteration.
+
+* Section 10. Replication - masters and slaves
+
+Question 10.1: dig us.america.group34.ik2218.ssvl.kth.se @ns2.us.america.group34.ik2218.ssvl.kth.se
+
+Question 10.2: dig china.greenworld34.ik2218.ssvl.kth.se    the answer is : 55.56.57.58
+               dig russia.greenworld34.ik2218.ssvl.kth.se   the answer is : 99.98.97.96
+
+Question 10.3: Plant more trees!
