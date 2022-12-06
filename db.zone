@@ -17,3 +17,6 @@ ns      IN      A       192.16.127.34
 
 @       IN      NS      ns2.group34.ik2218.ssvl.kth.se.
 ns2     IN      A       192.16.125.106
+
+@		IN	NS	ns.america.group34.ik2218.ssvl.kth.se.
+ns.america	IN	A	192.16.125.106
